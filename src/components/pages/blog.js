@@ -28,8 +28,29 @@ class Blog extends Component {
 		this.handleDeleteClick = this.handleDeleteClick.bind(this);
 	}
 
+<<<<<<< HEAD
 	handleDeleteClick() {
 		console.log("deleted");
+=======
+	handleDeleteClick(blog) {
+		axios
+			.delete(
+				`https://api.devcamp.space/portfolio/portfolio_blogs/${blog.id}`,
+				{ withCredentials: true }
+			)
+			.then((response) => {
+				this.setState({
+					blogItems: this.state.blogItems.filter((blogItem) => {
+						return blog.id !== blogItem.id;
+					}),
+				});
+
+				return response.data;
+			})
+			.catch((error) => {
+				console.log("delete blog error", error);
+			});
+>>>>>>> e1cafdb526520c1e67002d1520ebe4441d67682a
 	}
 
 	handleSuccessfulNewBlogSubmission(blog) {
@@ -80,7 +101,11 @@ class Blog extends Component {
 				}
 			)
 			.then((response) => {
+<<<<<<< HEAD
 				console.log("getting", response.data);
+=======
+				console.log("gettting", response.data);
+>>>>>>> e1cafdb526520c1e67002d1520ebe4441d67682a
 				this.setState({
 					blogItems: this.state.blogItems.concat(response.data.portfolio_blogs),
 					totalCount: response.data.meta.total_records,
@@ -105,8 +130,15 @@ class Blog extends Component {
 			if (this.props.loggedInStatus === "LOGGED_IN") {
 				return (
 					<div key={blogItem.id} className="admin-blog-wrapper">
+<<<<<<< HEAD
 						<BlogItem blogItem={blogItem} />;
 						<a onClick={this.handleDeleteClick}>Delete</a>
+=======
+						<BlogItem blogItem={blogItem} />
+						<a onClick={() => this.handleDeleteClick(blogItem)}>
+							<FontAwesomeIcon icon="trash" />
+						</a>
+>>>>>>> e1cafdb526520c1e67002d1520ebe4441d67682a
 					</div>
 				);
 			} else {
