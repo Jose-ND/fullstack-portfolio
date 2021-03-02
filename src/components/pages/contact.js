@@ -28,11 +28,7 @@ export default function () {
 							<FontAwesomeIcon icon="envelope" />
 						</div>
 
-<<<<<<< HEAD
-						<div className="text">jordan@example.com</div>
-=======
 						<div className="text">jose@example.com</div>
->>>>>>> e1cafdb526520c1e67002d1520ebe4441d67682a
 					</div>
 
 					<div className="bullet-point-group">
@@ -40,11 +36,7 @@ export default function () {
 							<FontAwesomeIcon icon="map-marked-alt" />
 						</div>
 
-<<<<<<< HEAD
-						<div className="text">Lehi, UT</div>
-=======
 						<div className="text">Columbus, OH</div>
->>>>>>> e1cafdb526520c1e67002d1520ebe4441d67682a
 					</div>
 				</div>
 			</div>
