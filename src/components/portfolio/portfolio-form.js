@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import DropzoneComponent from "react-dropzone-component";
 
-import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
-import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
+//import "../../../node_modules/react-dropzone-component/styles/filepicker.css";
+//import "../../../node_modules/dropzone/dist/min/dropzone.min.css";
 
 export default class PortfolioForm extends Component {
 	constructor(props) {
@@ -252,14 +252,14 @@ export default class PortfolioForm extends Component {
 							</div>
 						</div>
 					) : (
-						<DropzoneComponent
-							ref={this.thumbRef}
-							config={this.componentConfig()}
-							djsConfig={this.djsConfig()}
-							eventHandlers={this.handleThumbDrop()}>
-							<div className="dz-message">Thumbnail</div>
-						</DropzoneComponent>
-					)}
+							<DropzoneComponent
+								ref={this.thumbRef}
+								config={this.componentConfig()}
+								djsConfig={this.djsConfig()}
+								eventHandlers={this.handleThumbDrop()}>
+								<div className="dz-message">Thumbnail</div>
+							</DropzoneComponent>
+						)}
 
 					{this.state.banner_image_url && this.state.editMode ? (
 						<div className="portfolio-manager-image-wrapper">
@@ -272,14 +272,14 @@ export default class PortfolioForm extends Component {
 							</div>
 						</div>
 					) : (
-						<DropzoneComponent
-							ref={this.bannerRef}
-							config={this.componentConfig()}
-							djsConfig={this.djsConfig()}
-							eventHandlers={this.handleBannerDrop()}>
-							<div className="dz-message">Banner</div>
-						</DropzoneComponent>
-					)}
+							<DropzoneComponent
+								ref={this.bannerRef}
+								config={this.componentConfig()}
+								djsConfig={this.djsConfig()}
+								eventHandlers={this.handleBannerDrop()}>
+								<div className="dz-message">Banner</div>
+							</DropzoneComponent>
+						)}
 
 					{this.state.logo_url && this.state.editMode ? (
 						<div className="portfolio-manager-image-wrapper">
@@ -290,14 +290,14 @@ export default class PortfolioForm extends Component {
 							</div>
 						</div>
 					) : (
-						<DropzoneComponent
-							ref={this.logoRef}
-							config={this.componentConfig()}
-							djsConfig={this.djsConfig()}
-							eventHandlers={this.handleLogoDrop()}>
-							<div className="dz-message">Logo</div>
-						</DropzoneComponent>
-					)}
+							<DropzoneComponent
+								ref={this.logoRef}
+								config={this.componentConfig()}
+								djsConfig={this.djsConfig()}
+								eventHandlers={this.handleLogoDrop()}>
+								<div className="dz-message">Logo</div>
+							</DropzoneComponent>
+						)}
 				</div>
 
 				<div>
